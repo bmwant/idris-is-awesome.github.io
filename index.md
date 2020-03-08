@@ -3,7 +3,9 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Basic operations
 
-* [Reading from a file](#)
+* [Reading from a file](/docs#reading-from-a-file)
+* [Is odd/even number](/docs#)
+* [List comprehensions](/docs)
 
 
 ### Famous problems
@@ -13,3 +15,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 ### Hackerrank solutions
 
 * [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem)
+
+### Resources
+
+* []()
