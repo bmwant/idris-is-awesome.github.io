@@ -23,6 +23,15 @@ main = do
   putStrLn content
 ```
 
+#### Writing to a file
+
+```idris
+main : IO ()
+main = do
+  (Right content) <- readFile "input.txt" | (Left err) => printLn err
+  putStrLn content
+```
+
 #### Is odd/even number
 
 ```idris

@@ -5,6 +5,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 * [Compiling and running a program](docs/basic#compiling-and-running a-program)
 * [Reading from a file](docs/basic#reading-from-a-file)
+* [Writing to a file](docs/basic#writing-to-a-file)
 * [Is odd/even number](docs/basic.md#is-oddeven-number)
 * [List comprehensions](/docs)
 
@@ -12,8 +13,8 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 ### Advanced algorithms
 
 * [Insertion sort](docs/advanced#insertion-sort)
-* [Transpose a matrix](docs/advanced#insertion-sort)
-* [Multiply matrices](docs/advanced#insertion-sort)
+* [Transpose a matrix](docs/advanced#transpose-a-matrix)
+* [Multiply matrices](docs/advanced#multiply-matrices)
 
 ### Famous problems
 
@@ -21,7 +22,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Hackerrank solutions
 
-* [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem)
+* [Divisible Sum Pairs](docs/hackerrank#divisible-sum-pairs)
 
 ### Resources
 
@@ -29,3 +30,8 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Python 3 backend for Idris](https://github.com/thautwarm/idris-python)
 * [Ruby backend for Idris](https://github.com/mrb/idris-ruby)
 * [How to implement an Idris back end within hours](https://github.com/thautwarm/Quick-Backend)
+
+### Misc
+
+* [Idris mode for VIM](https://github.com/idris-hackers/idris-vim)
+* [Plugin to use Idris with Sublime](https://github.com/idris-hackers/idris-sublime)
