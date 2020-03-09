@@ -9,6 +9,12 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [List comprehensions](/docs)
 
 
+### Advanced algorithms
+
+* [Insertion sort](docs/advanced#insertion-sort)
+* [Transpose a matrix](docs/advanced#insertion-sort)
+* [Multiply matrices](docs/advanced#insertion-sort)
+
 ### Famous problems
 
 * [Eight queens puzzle](#)
@@ -19,4 +25,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Resources
 
-* []()
+* [Python backend for Idris](https://github.com/ziman/idris-py)
+* [Python 3 backend for Idris](https://github.com/thautwarm/idris-python)
+* [Ruby backend for Idris](https://github.com/mrb/idris-ruby)
+* [How to implement an Idris back end within hours](https://github.com/thautwarm/Quick-Backend)
