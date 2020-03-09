@@ -44,3 +44,28 @@ mutual
   isOdd Z = False
   isOdd (S k) = isEven k
 ```
+
+
+#### List comprehensions
+
+* [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple) in a given range
+
+```idris
+pythag: Int -> List (Int, Int, Int)
+pythag n = [ (x, y, z) | z <- [1..n], y <- [1..z], x <- [1..y],
+                         x*x + y*y == z*z ]
+```
+
+* Count word lengths in a sentence
+
+```idris
+wordLengths: String -> List Nat
+wordLengths string = [ length word | word <- words string ]
+```
+
+* List of squares in a given range which are only even
+
+```idris
+evenSquares: Nat -> List Nat
+evenSquares n = [ x*x | x <- [1..n], x*x `mod` 2 == 0 ]
+```
