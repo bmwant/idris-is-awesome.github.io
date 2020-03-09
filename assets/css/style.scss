@@ -1,0 +1,28 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header h1, h1, h2, h3, h4, h5, h6 {
+  color: #7c334f;
+  text-shadow: none;
+}
+
+#main_content h4 {
+  font-size: 16px;
+}
+
+body {
+  background: #FBFAF7;
+  color: #666;
+}
+
+header {
+  background: #ece4d8;
+  border-bottom: 1px dashed #e69b95;
+}
+
+a {
+  color: #cd596b;
+  text-shadow: none;
+}
