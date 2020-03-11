@@ -14,6 +14,11 @@ $ idris hello.idr
 $ ./hello
 ```
 
+#### Reading input from user
+
+```idris
+```
+
 #### Reading from a file
 
 ```idris
@@ -23,13 +28,22 @@ main = do
   putStrLn content
 ```
 
+* Using `case`
+
+```idris
+main : IO ()
+main = do file <- readFile "input.txt"
+          case file of
+            Right content => putStrLn content
+            Left err => printLn err
+```
+
 #### Writing to a file
 
 ```idris
 main : IO ()
-main = do
-  (Right content) <- readFile "input.txt" | (Left err) => printLn err
-  putStrLn content
+main = do res <- writeFile "output.txt" "Test file content\n"
+          printLn res
 ```
 
 #### Is odd/even number

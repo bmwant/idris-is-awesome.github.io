@@ -4,9 +4,10 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 ### Basic operations
 
 * [Compiling and running a program](docs/basic#compiling-and-running-a-program)
+* [Reading input from user](docs/basic#reading-input-from-user)
 * [Reading from a file](docs/basic#reading-from-a-file)
 * [Writing to a file](docs/basic#writing-to-a-file)
-* [Is odd/even number](docs/basic.md#is-oddeven-number)
+* [Is odd/even number](docs/basic#is-oddeven-number)
 * [List comprehensions](/docs/basic#list-comprehensions)
 
 
