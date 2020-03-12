@@ -36,3 +36,15 @@ a {
 .btn:hover {
   background: #7c334f;
 }
+
+.btn-index .icon {
+  opacity: 0.9;
+  background: #d8d8d8;
+  -webkit-mask: url(../images/fa-home.svg) no-repeat 50% 50%;
+}
+
+.btn-github .icon {
+  opacity: 0.9;
+  background: #d8d8d8;
+  -webkit-mask: url(../images/fa-code.svg) no-repeat 50% 50%;
+}
