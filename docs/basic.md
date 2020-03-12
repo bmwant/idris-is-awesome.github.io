@@ -83,3 +83,10 @@ wordLengths string = [ length word | word <- words string ]
 evenSquares: Nat -> List Nat
 evenSquares n = [ x*x | x <- [1..n], x*x `mod` 2 == 0 ]
 ```
+
+* Define and use variable within list comprehenion
+
+```idris
+someCubes: Nat -> List Nat
+someCubes n = [ y | x <- [1..n], let y = x*x*x, y `mod` 5 /= 0 ]
+```

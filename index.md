@@ -23,6 +23,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Hackerrank solutions
 
+* [How to check a solution](docs/hackerrank#how-to-check-a-solution)
 * [Divisible Sum Pairs](docs/hackerrank#divisible-sum-pairs)
 
 ### Resources
