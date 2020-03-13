@@ -13,6 +13,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Advanced algorithms
 
+* [Quick sort](docs/advanced#quick-sort)
 * [Insertion sort](docs/advanced#insertion-sort)
 * [Transpose a matrix](docs/advanced#transpose-a-matrix)
 * [Multiply matrices](docs/advanced#multiply-matrices)
