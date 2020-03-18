@@ -50,4 +50,4 @@ main = do fline <- getLine
           printLn (sol k arr)
 ```
 
-**WARN**: `Solution is not total`
+**WARN**: `solution is not total`

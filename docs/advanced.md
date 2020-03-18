@@ -9,6 +9,8 @@ quicksort (x :: xs) =
         (quicksort lesser) ++ [x] ++ (quicksort greater)
 ```
 
+**WARN**: `function is not total`
+
 #### Insertion sort
 
 ```idris
@@ -61,3 +63,39 @@ transposeMat (x :: xs) = let xsTrans = transposeMat xs in
 ```
 
 #### Multiply matrices
+
+```idris
+import Data.Vect
+
+dotProduct : Num elem =>
+             Vect n elem -> Vect n elem -> elem
+dotProduct [] [] = 0
+dotProduct (x :: xs) (y :: ys) = x*y + dotProduct xs ys
+
+multiplyMat : Num elem =>
+              Vect n (Vect m elem) ->
+              Vect m (Vect p elem) ->
+              Vect n (Vect p elem)
+multiplyMat [] _ = []
+multiplyMat (x :: xs) ys = let ysTrans = transpose ys in
+                           map (dotProduct x) ysTrans :: multiplyMat xs ys
+```
+
+* Separate declaration for a `Matrix` type
+
+```idris
+import Data.Vect
+
+Matrix : Nat -> Nat -> Type -> Type
+Matrix n m elem = Vect n (Vect m elem)
+
+multiplyMat : Num t => Matrix n m t -> Matrix m p t -> Matrix n p t
+multiplyMat x y = multiplyMat' x (transpose y)
+  where
+        dot : Num t => Vect n t -> Vect n t -> t
+        dot xs ys = sum $ map (\(x', y') => (x' * y')) (zip xs ys)
+
+        multiplyMat' : Num t => Matrix n m t -> Matrix p m t -> Matrix n p t
+        multiplyMat' (x :: xs) ys = map (dot x) ys :: multiplyMat' xs ys
+        multiplyMat' [] _ = []
+```
