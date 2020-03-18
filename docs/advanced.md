@@ -93,7 +93,7 @@ multiplyMat : Num t => Matrix n m t -> Matrix m p t -> Matrix n p t
 multiplyMat x y = multiplyMat' x (transpose y)
   where
         dot : Num t => Vect n t -> Vect n t -> t
-        dot xs ys = sum $ map (\(x', y') => (x' * y')) (zip xs ys)
+        dot xs ys = sum $ zipWith (*) xs ys
 
         multiplyMat' : Num t => Matrix n m t -> Matrix p m t -> Matrix n p t
         multiplyMat' (x :: xs) ys = map (dot x) ys :: multiplyMat' xs ys
