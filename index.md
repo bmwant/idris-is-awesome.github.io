@@ -34,6 +34,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Python 3 backend for Idris](https://github.com/thautwarm/idris-python)
 * [Ruby backend for Idris](https://github.com/mrb/idris-ruby)
 * [Erlang backend for Idris](https://github.com/lenary/idris-erlang)
+* [A ChezScheme backend for Idris](https://github.com/melted/idris-chez)
 * [How to implement an Idris back end within hours](https://github.com/thautwarm/Quick-Backend)
 
 ### Misc
