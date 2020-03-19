@@ -10,7 +10,6 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Is odd/even number](docs/basic#is-oddeven-number)
 * [List comprehensions](/docs/basic#list-comprehensions)
 
-
 ### Advanced algorithms
 
 * [Quick sort](docs/advanced#quick-sort)
@@ -26,6 +25,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 * [How to check a solution](docs/hackerrank#how-to-check-a-solution)
 * [Divisible Sum Pairs](docs/hackerrank#divisible-sum-pairs)
+* [Migratory Birds](docs/hackerrank#migratory-birds)
 
 ### Resources
 
