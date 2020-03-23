@@ -72,6 +72,23 @@ main = do res <- writeFile "output.txt" "Test file content\n"
           printLn res
 ```
 
+#### Pattern match a value of expression
+
+* Using `with` (accepts predicate and a list of elements and returns list of those elements for which predicate is true)
+
+```idris
+my_filter : (elem -> Bool) -> List elem -> List elem
+my_filter f [] = []
+my_filter f (x :: xs) with (f x)
+  my_filter f (x :: xs) | True = x :: (my_filter f xs)
+  my_filter f (_ :: xs) | False = my_filter f xs
+```
+
+```idris
+my_filter isDigit ['1', 'a', '2', 'b']
+['1', '2']
+```
+
 #### Is odd/even number
 
 ```idris

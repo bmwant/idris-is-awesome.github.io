@@ -1,4 +1,6 @@
 
+![Idris logo](https://www.idris-lang.org/images/logo-small.png)
+
 Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 
 ### Basic operations
@@ -7,6 +9,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Reading input from user](docs/basic#reading-input-from-user)
 * [Reading from a file](docs/basic#reading-from-a-file)
 * [Writing to a file](docs/basic#writing-to-a-file)
+* [Pattern match a value of expression](docs/basic#pattern-match-a-value-of-expression)
 * [Is odd/even number](docs/basic#is-oddeven-number)
 * [List comprehensions](/docs/basic#list-comprehensions)
 
