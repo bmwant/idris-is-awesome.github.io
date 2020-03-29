@@ -133,3 +133,30 @@ evenSquares n = [ x*x | x <- [1..n], x*x `mod` 2 == 0 ]
 someCubes: Nat -> List Nat
 someCubes n = [ y | x <- [1..n], let y = x*x*x, y `mod` 5 /= 0 ]
 ```
+
+#### Interfaces and implementations
+
+* Implement equality check for your type
+
+```idris
+data Person : Type where
+  MkPerson : String -> Int -> Person
+
+implementation Eq Person where
+  (MkPerson name1 age1) == (MkPerson name2 age2) =
+    (name1 == name2) && (age1 == age2)
+
+alice : Person
+alice = MkPerson "Alice" 24
+
+bob : Person
+bob = MkPerson "Bob" 42
+```
+
+```idris
+alice /= bob
+True : Bool
+
+alice == bob
+False : Bool
+```

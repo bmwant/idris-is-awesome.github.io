@@ -11,7 +11,8 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Writing to a file](docs/basic#writing-to-a-file)
 * [Pattern match a value of expression](docs/basic#pattern-match-a-value-of-expression)
 * [Is odd/even number](docs/basic#is-oddeven-number)
-* [List comprehensions](/docs/basic#list-comprehensions)
+* [List comprehensions](docs/basic#list-comprehensions)
+* [Interfaces and implementations](docs/basic#interfaces-and-implementations)
 
 ### Advanced algorithms
 
