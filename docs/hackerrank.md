@@ -100,3 +100,32 @@ main = do _ <- getLine
             Nothing => pure ()
             Just result => printLn result
 ```
+
+#### Mini-Max Sum
+
+[Link to the problem](https://www.hackerrank.com/challenges/mini-max-sum/problem)
+
+```idris
+import Data.String
+
+||| Returns end of the list
+end : List Integer -> List Integer
+end [] = []
+end (x :: xs) = xs
+
+||| Returns start of the list
+start : List Integer -> List Integer
+start [] = []
+start lst = st lst [] where
+  st : List Integer -> List Integer -> List Integer
+  st [] current = current
+  st [x] current = current
+  st (x :: xs) current = x :: (st xs current)
+
+main : IO ()
+main = do input <- getLine
+          let arr = catMaybes [ parseInteger n | n <- words input ]
+          let minSum = sum $ start $ sort arr
+          let maxSum = sum $ end $ sort arr
+          putStrLn (show minSum ++ " " ++ show maxSum)
+```

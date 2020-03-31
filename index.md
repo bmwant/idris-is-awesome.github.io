@@ -30,6 +30,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [How to check a solution](docs/hackerrank#how-to-check-a-solution)
 * [Divisible Sum Pairs](docs/hackerrank#divisible-sum-pairs)
 * [Migratory Birds](docs/hackerrank#migratory-birds)
+* [Mini-Max Sum](docs/hackerrank#mini-max-sum)
 
 ### Resources
 
