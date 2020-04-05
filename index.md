@@ -31,6 +31,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Divisible Sum Pairs](docs/hackerrank#divisible-sum-pairs)
 * [Migratory Birds](docs/hackerrank#migratory-birds)
 * [Mini-Max Sum](docs/hackerrank#mini-max-sum)
+* [Birthday Chocolate](docs/hackerrank#birthday-chocolate)
 
 ### Resources
 

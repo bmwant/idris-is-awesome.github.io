@@ -129,3 +129,34 @@ main = do input <- getLine
           let maxSum = sum $ end $ sort arr
           putStrLn (show minSum ++ " " ++ show maxSum)
 ```
+
+#### Birthday Chocolate
+
+[Link to the problem](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
+
+```idris
+count : Eq elem => elem -> List elem -> Nat
+count e [] = 0
+count e (x :: xs) = (if e == x then 1 else 0) + count e xs
+
+slices : List Nat -> Nat -> List (List Nat)
+slices [] _ = []
+slices (x :: xs) n = let slice = take n (x :: xs) in
+  if length xs >= n
+  then slice :: slices xs n
+  else [slice]
+
+sol : List Nat -> Nat -> Nat -> Nat
+sol [] _ _ = 0
+sol lst d m = count d (map sum (slices lst m))
+
+main : IO ()
+main = do fline <- getLine
+          sline <- getLine
+          tline <- getLine
+
+          let bar = [ the Nat (cast v) | v <- words sline ]
+          let d = the Nat (cast (fst (span (/= ' ') tline)))
+          let m = the Nat (cast (snd (span (/= ' ') tline)))
+          printLn (sol bar d m)
+```
