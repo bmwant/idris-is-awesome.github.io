@@ -160,3 +160,38 @@ main = do fline <- getLine
           let m = the Nat (cast (snd (span (/= ' ') tline)))
           printLn (sol bar d m)
 ```
+
+#### Cats and a Mouse
+
+[Link to the problem](https://www.hackerrank.com/challenges/cats-and-a-mouse/problem)
+
+```idris
+triples : List Nat -> (Nat, Nat, Nat)
+triples (x :: y :: z :: rest) = (x, y, z)
+triples _ = (0, 0, 0)
+
+sol : Integer -> Integer -> Integer -> String
+sol x y z = case abs(x-z) `compare` abs(y-z) of
+              LT => "Cat A"
+              EQ => "Mouse C"
+              GT => "Cat B"
+
+getInput : Nat -> IO (List (List Nat))
+getInput Z = pure []
+getInput (S k) =
+  do line <- getLine
+     let values = [ the Nat (cast v) | v <- words line ]
+     rest <- getInput k
+     pure ([values] ++ rest)
+
+solQueries : (Nat, Nat, Nat) -> String
+solQueries (x, y, z) = sol (cast x) (cast y) (cast z)
+
+main : IO ()
+main = do fline <- getLine
+          let n = the Nat (cast fline)
+          input <- getInput n
+          let queries = map triples input
+          let result = map solQueries queries
+          putStr $ unlines result
+```
