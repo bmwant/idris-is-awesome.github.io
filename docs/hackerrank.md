@@ -195,3 +195,24 @@ main = do fline <- getLine
           let result = map solQueries queries
           putStr $ unlines result
 ```
+
+#### Picking Numbers
+
+[Link to the problem](https://www.hackerrank.com/challenges/picking-numbers/problem)
+
+```idris
+```
+
+#### Utopian Tree
+
+[Link to the problem](https://www.hackerrank.com/challenges/utopian-tree/problem)
+
+```idris
+```
+
+#### Viral Advertising
+
+[Link to the problem](https://www.hackerrank.com/challenges/strange-advertising/problem)
+
+```idris
+```

@@ -33,6 +33,9 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Mini-Max Sum](docs/hackerrank#mini-max-sum)
 * [Birthday Chocolate](docs/hackerrank#birthday-chocolate)
 * [Cats and a Mouse](docs/hackerrank#cats-and-a-mouse)
+* [Picking Numbers](docs/hackerrank#picking-numbers)
+* [Utopian Tree](docs/hackerrank#utopian-tree)
+* [Viral Advertising](docs/hackerrank#viral-advertising)
 
 ### Resources
 
