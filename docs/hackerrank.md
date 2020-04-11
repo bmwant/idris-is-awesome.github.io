@@ -208,6 +208,26 @@ main = do fline <- getLine
 [Link to the problem](https://www.hackerrank.com/challenges/utopian-tree/problem)
 
 ```idris
+getInput : Nat -> IO (List Nat)
+getInput Z = pure []
+getInput (S k) =
+  do line <- getLine
+     let value = the Nat (cast line)
+     rest <- getInput k
+     pure (value :: rest)
+
+sol : Nat -> Nat
+sol Z = 1
+sol (S k) = case modNatNZ (S k) 2 SIsNotZ of
+              Z => sol k + 1 -- summer
+              _ => sol k * 2 -- spring
+
+main : IO ()
+main = do line <- getLine
+          let n = the Nat (cast line)
+          input <- getInput n
+          let result = map sol input
+          putStr $ unlines (map (\x => the String (cast x)) result)
 ```
 
 #### Viral Advertising
