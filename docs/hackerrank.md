@@ -215,4 +215,15 @@ main = do fline <- getLine
 [Link to the problem](https://www.hackerrank.com/challenges/strange-advertising/problem)
 
 ```idris
+shared : Nat -> Nat
+shared Z = 5
+shared (S k) = (divNatNZ (shared k) 2 SIsNotZ) * 3
+
+liked : Nat -> Nat
+liked Z = 0
+liked (S k) = (divNatNZ (shared k) 2 SIsNotZ) + liked k
+
+main : IO ()
+main = do line <- getLine
+          printLn $ liked $ the Nat $ cast line
 ```
