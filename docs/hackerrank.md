@@ -201,6 +201,31 @@ main = do fline <- getLine
 [Link to the problem](https://www.hackerrank.com/challenges/picking-numbers/problem)
 
 ```idris
+count : Eq elem => elem -> List elem -> Nat
+count e [] = 0
+count e (x :: xs) = (if e == x then 1 else 0) + count e xs
+
+longest : List Nat -> List Nat -> Nat
+longest [] lst = 0
+longest (x :: xs) lst =
+  max (check x) (longest xs lst) where
+    check : Nat -> Nat
+    check Z = (count Z lst) + (count (S Z) lst)
+    check (S k) =
+      let left = (count k lst) + (count (S k) lst)
+          right = (count (S k) lst) + (count (S (S k)) lst) in
+          max left right
+
+sol : List Nat -> Nat
+sol [] = 0
+sol lst = let unique = nub lst in
+              longest unique lst
+
+main : IO ()
+main = do _ <- getLine
+          line <- getLine
+          let arr = [ the Nat (cast v) | v <- words line ]
+          printLn $ sol arr
 ```
 
 #### Utopian Tree
