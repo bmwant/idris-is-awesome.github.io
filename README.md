@@ -2,7 +2,7 @@
 
 Repository with a bunch of receipts for common algorithmic tasks using Idris.
 
-Github Pages website [is available here](https://bmwant.github.io/idris-is-awesome.github.io/)
+:earth_africa: Github Pages website [is available here](https://bmwant.github.io/idris-is-awesome.github.io/) :point_left:
 
 
 ### Contributions
