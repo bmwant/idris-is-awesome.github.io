@@ -272,3 +272,57 @@ main : IO ()
 main = do line <- getLine
           printLn $ liked $ the Nat $ cast line
 ```
+
+#### Staircase
+
+[Link to the problem](https://www.hackerrank.com/challenges/staircase/problem)
+
+```idris
+```
+
+#### Queen's Attack II
+
+[Link to the problem](https://www.hackerrank.com/challenges/queens-attack-2/problem)
+
+```idris
+getPair : IO (Nat, Nat)
+getPair = do line <- getLine
+             let (num1, num2) = span (/= ' ') line
+             pure (the Nat (cast num1), the Nat (cast num2))
+
+getInput : Nat -> IO (List (Nat, Nat))
+getInput Z = pure []
+getInput (S k) =
+  do (x, y) <- getPair
+     rest <- getInput k
+     pure ((x, y) :: rest)
+
+||| Takes initial position, size of a board and list of obstacles
+||| Returns number of squares it can reach
+count : (Nat, Nat) -> Nat -> List (Nat, Nat) -> Nat
+count (x0, y0) k lst = sum [
+  line (x0, y0) ( 0,  1), -- move up
+  line (x0, y0) ( 0, -1), -- move down
+  line (x0, y0) ( 1,  0), -- move right
+  line (x0, y0) (-1,  0), -- move left
+  line (x0, y0) ( 1,  1), -- top right
+  line (x0, y0) (-1,  1), -- top left
+  line (x0, y0) ( 1, -1), -- bottom right
+  line (x0, y0) (-1, -1)  -- bottom left
+] where
+  line : (Nat, Nat) -> (Integer, Integer) -> Nat
+  line (x0', y0') (dx, dy) =
+    let newX = cast x0' + dx
+        newY = cast y0' + dy in
+        if newX > 0 && newX <= cast k &&
+           newY > 0 && newY <= cast k &&
+           not (elem (cast newX, cast newY) lst)
+        then 1 + line (cast newX, cast newY) (dx, dy)
+        else 0
+
+main : IO ()
+main = do (n, k) <- getPair
+          (x0, y0) <- getPair
+          obstacles <- getInput k
+          printLn $ count (x0, y0) n obstacles
+```

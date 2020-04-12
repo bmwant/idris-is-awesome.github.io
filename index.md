@@ -36,6 +36,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Picking Numbers](docs/hackerrank#picking-numbers)
 * [Utopian Tree](docs/hackerrank#utopian-tree)
 * [Viral Advertising](docs/hackerrank#viral-advertising)
+* [Staircase](docs/hackerrank#staircase)
 
 ### Resources
 
