@@ -278,6 +278,29 @@ main = do line <- getLine
 [Link to the problem](https://www.hackerrank.com/challenges/staircase/problem)
 
 ```idris
+repeat : Nat -> Char -> IO ()
+repeat Z _ = pure ()
+repeat (S k) c = putChar c >>= \_ => repeat k c
+
+printLine : (k : Nat) -> (n : Nat) -> {auto smaller : LTE k n} -> IO ()
+printLine Z _ = pure ()
+printLine k n = do repeat (n-k) ' '
+                   repeat k '#'
+                   putStrLn ""
+
+-- k - hashes
+-- n - row length
+sol : Nat -> Nat -> IO ()
+sol k n =
+  case isLTE k n of
+    Yes prf => do printLine k n
+                  sol (k+1) n
+    No contra => pure ()
+
+main : IO ()
+main = do line <- getLine
+          let n = the Nat (cast line)
+          sol 1 n
 ```
 
 #### Queen's Attack II

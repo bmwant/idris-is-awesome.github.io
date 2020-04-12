@@ -37,6 +37,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Utopian Tree](docs/hackerrank#utopian-tree)
 * [Viral Advertising](docs/hackerrank#viral-advertising)
 * [Staircase](docs/hackerrank#staircase)
+* [Queens's Attack II](docs/hackerrank##queens-attack-ii)
 
 ### Resources
 
