@@ -36,11 +36,12 @@ Now you are good to upload your solution!
 
 ```idris
 sol : Nat -> List Nat -> Nat
-sol k xs =
+sol Z _ = 0
+sol (S k) xs =
   length [1 | i <- zip [0..length xs] xs,
               j <- zip [0..length xs] xs,
               fst i < fst j,
-              (snd i + snd j) `mod` k == 0]
+              modNatNZ (snd i + snd j) (S k) SIsNotZ == 0]
 
 main : IO ()
 main = do fline <- getLine
@@ -49,9 +50,6 @@ main = do fline <- getLine
           let arr = [ the Nat (cast v) | v <- words sline ]
           printLn (sol k arr)
 ```
-
-**WARN**: `solution is not total`
-
 
 #### Migratory Birds
 
