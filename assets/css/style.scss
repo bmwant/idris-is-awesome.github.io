@@ -49,6 +49,12 @@ a {
   -webkit-mask: url(../images/fa-code.svg) no-repeat 50% 50%;
 }
 
+.btn-videos .icon {
+  opacity: 0.9;
+  background: #d8d8d8;
+  -webkit-mask: url(../images/fa-video.svg) no-repeat 50% 50%;
+}
+
 code.language-plaintext {
   background: #ece4d8;
 }

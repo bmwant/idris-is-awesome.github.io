@@ -13,6 +13,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [Is odd/even number](docs/basic#is-oddeven-number)
 * [List comprehensions](docs/basic#list-comprehensions)
 * [Interfaces and implementations](docs/basic#interfaces-and-implementations)
+* [Generate random number](docs/basic#generate-random-number)
 
 ### Advanced algorithms
 

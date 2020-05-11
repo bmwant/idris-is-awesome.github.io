@@ -9,3 +9,9 @@ Repository with a bunch of receipts for common algorithmic tasks using Idris.
 
 Just open an issue with a suggested topic you are interesting in or
 create a PR with example/solution added to the corresponding section.
+
+### Development
+
+```bash
+$ bundle exec jekyll serve
+```
