@@ -14,6 +14,7 @@ Welcome to the repository dedicated to [Idris](https://www.idris-lang.org/)!
 * [List comprehensions](docs/basic#list-comprehensions)
 * [Interfaces and implementations](docs/basic#interfaces-and-implementations)
 * [Generate random number](docs/basic#generate-random-number)
+* [Convert binary number to decimal](docs/basic#convert-binary-number-to-decimal)
 
 ### Advanced algorithms
 

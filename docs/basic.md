@@ -160,3 +160,39 @@ True : Bool
 alice == bob
 False : Bool
 ```
+
+### Generate random number
+
+```idris
+-- tbd
+```
+
+### Convert binary number to decimal
+
+```idris
+data BinChar : Char -> Type where
+  O : BinChar '0'
+  I : BinChar '1'
+
+data Every : (a -> Type) -> List a -> Type where
+  Nil : {P : a -> Type} -> Every P []
+  (::) : {P : a -> Type} -> P x -> Every P xs -> Every P (x :: xs)
+  
+fromBinChars : Every BinChar xs -> Nat -> Nat
+fromBinChars [] _ = 0
+fromBinChars (_ :: ys) Z = 1 
+fromBinChars (O :: ys) (S k) = fromBinChars ys k
+fromBinChars (I :: ys) (S k) = pow 2 k + fromBinChars ys k
+
+b : (s : String) -> {auto p : Every BinChar (unpack s)} -> Nat
+b {p} s = fromBinChars p (length s)
+```
+
+Example of usage
+
+```idris
+Idris> b"10110"
+22 : Nat
+```
+
+which under the hood will call `fromBinChars [I, O, I, I, O] 5`
